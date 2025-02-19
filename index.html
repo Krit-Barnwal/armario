@@ -180,6 +180,89 @@
         text-align: left;
         margin: 20px 0;
     }
+    .features-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .features-heading {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .features-subheading {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature-card {
+            background-color: #222;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card.highlighted {
+            background-color: #15803d;
+            color: white;
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .feature-title {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .feature-description {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .highlighted .feature-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
     
     </style>
 </head>
@@ -216,6 +299,71 @@
     <div id="shop-category">
         <p class="main-items">SHOP BY CATEGORY</p>
         
+    </div>
+    <div class="features-section">
+        <h2 class="features-heading">Why Choose Almaari?</h2>
+        <p class="features-subheading">At Almaari, we blend convenience with a world of fashion opportunities, ensuring excellent service for customers and suppliers.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <h3 class="feature-title">Exclusive Fashion Selection</h3>
+                </div>
+                <p class="feature-description">Experience luxury materials and impeccable styles, perfect for your wardrobe.</p>
+            </div>
+
+            <div class="feature-card highlighted">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <h3 class="feature-title">Secure Shopping</h3>
+                </div>
+                <p class="feature-description">Shop with confidence through our secure payment gateways designed for your safety.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="feature-title">Fast Shipping</h3>
+                </div>
+                <p class="feature-description">Get your items delivered quickly and conveniently, right to your doorstep.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                    <h3 class="feature-title">Supplier Tools</h3>
+                </div>
+                <p class="feature-description">Register easily and manage your product listings seamlessly without hassle.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="feature-title">Wide Variety</h3>
+                </div>
+                <p class="feature-description">Explore diverse styles that cater to every taste and occasion at Almaari.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="feature-title">Customer Support</h3>
+                </div>
+                <p class="feature-description">Enjoy 24/7 support for any inquiries and assistance regarding your shopping experience.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
