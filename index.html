@@ -1,188 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-    
-    body {
-        background-color: #181818;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-    }
-    
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-        width: 80%;
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 20;
-    }
-    
-    .nav-left {
-        display: flex;
-        align-items: center;
-    }
-    
-    .logo {
-        height: 60px;
-        margin-right: 15px;
-    }
-    
-    .nav-center {
-        background: #222;
-        border-radius: 25px;
-        display: flex;
-    }
-    
-    .nav-right {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .nav-item {
-        padding: 10px 20px;
-        margin: 5px;
-        border-radius: 20px;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-decoration: none;
-        background: transparent;
-        background: #222;
-        border-radius: 25px;
-        transition: background 0.3s ease;
-    }
-    
-    .nav-item:hover, .nav-item.active {
-        background: white;
-        color: black;
-    }
-    
-    .cart-icon:hover {
-        background-color: rgba(39, 35, 35, 0.644);
-    }
-    
-    .cart-icon {
-        padding: 5px;
-        border-radius: 50px;
-        margin: 0 auto;
-        height: 30px;
-        margin-right: 10px;
-    }
-    
-    @font-face {
-        font-family: 'Kage';
-        src: url('path/to/Kage.otf') format('opentype');
-    }
-    
-    .banner {
-        width: 100%;
-        height: 95vh;
-        position: relative;
-        margin-top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1; /* Ensure it's behind the navbar */
-    }
-    
-    .banner-heading {
-        position: absolute;
-        top: 170px; /* Adjust if necessary */
-        left: 55px;
-        z-index: 10;
-        line-height: 1.5;
-    }
-    
-    .main-heading {
-        color: white;
-        font-size: 70px;
-        font-weight: 50;
-        font-family: 'Raleway', sans-serif;
-        margin: 0;
-    }
-    
-    .sub-heading-container {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 30px;
-    }
-    
-    .sub-heading {
-        color: white;
-        font-size: 30px;
-        font-weight: 400;
-        font-family: sans-serif;
-        margin: 0;
-    }
-    
-    .arrow {
-        transform: rotate(318deg);
-        margin-right: 10px;
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        position: absolute;
-        z-index: 1;
-    }
-    
-    .start-shopping {
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        color: black;
-        padding: 15px 30px;
-        font-size: 20px;
-        font-family: 'Raleway', sans-serif;
-        border-radius: 30px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        z-index: 10;
-    }
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-    .start-shopping:hover {
-        background-color: #181818;
-        color: white;
-    }
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
 
-    #shop-category {
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-        text-align: left;
-    }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            width: 80%;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
 
-    .main-items {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 15px;
-        padding-left: 40px;
-        font-size: 30px;
-        color: white;
-        text-align: left;
-        margin: 20px 0;
-    }
-    .features-section {
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .nav-center {
+            background: #222;
+            border-radius: 25px;
+            display: flex;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            background: transparent;
+            background: #222;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: white;
+            color: black;
+        }
+
+        .cart-icon:hover {
+            background-color: rgba(39, 35, 35, 0.644);
+        }
+
+        .cart-icon {
+            padding: 5px;
+            border-radius: 50px;
+            margin: 0 auto;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        @font-face {
+            font-family: 'Kage';
+            src: url('path/to/Kage.otf') format('opentype');
+        }
+
+        .banner {
+            width: 100%;
+            height: 95vh;
+            position: relative;
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            /* Ensure it's behind the navbar */
+        }
+
+        .banner-heading {
+            position: absolute;
+            top: 170px;
+            /* Adjust if necessary */
+            left: 55px;
+            z-index: 10;
+            line-height: 1.5;
+        }
+
+        .main-heading {
+            color: white;
+            font-size: 70px;
+            font-weight: 50;
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+        }
+
+        .sub-heading-container {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+
+        .sub-heading {
+            color: white;
+            font-size: 30px;
+            font-weight: 400;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .arrow {
+            transform: rotate(318deg);
+            margin-right: 10px;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .start-shopping {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            border-radius: 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            z-index: 10;
+        }
+
+        .start-shopping:hover {
+            background-color: #181818;
+            color: white;
+        }
+
+        #shop-category {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .main-items {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 15px;
+            padding-left: 40px;
+            font-size: 30px;
+            color: white;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .features-section {
+            background-color: #181818;
             padding: 60px 20px;
-            max-width: 1200px;
+            min-width: 1300px;
             margin: 0 auto;
             text-align: center;
             font-family: 'Raleway', sans-serif;
@@ -205,17 +212,20 @@
         }
 
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1.5rem;
-            padding: 1rem;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, 1fr);   /* 3 rows */
+    gap: 1.5rem;
+    padding: 1rem;
+}
 
-        @media (min-width: 768px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        grid-template-rows: auto; /* Let rows adjust based on content */
+    }
+}
+
 
         .feature-card {
             background-color: #222;
@@ -263,9 +273,86 @@
         .highlighted .feature-description {
             color: rgba(255, 255, 255, 0.9);
         }
-    
+
+        .section-heading {
+            background-color: whitesmoke;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 800;
+            /* Extra Bold */
+            color: black;
+            padding: 10px;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .promo-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .promo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .promo-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+        }
+
+        .promo-title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .promo-discount {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .brand-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .brand-logo {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+       
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-left">
@@ -285,85 +372,247 @@
             <a href="#" class="nav-item active">Signup</a>
         </div>
     </nav>
-    <div class="banner">
+    <section class="banner">
         <div class="banner-heading">
             <p class="main-heading">We are digital<br>meets fashion</p>
             <div class="sub-heading-container">
                 <img class="arrow" src="res\arrow.png" alt="arrow" style="width: 40px;height: 40px;">
-                <p class="sub-heading">Wear our craftmanship with pride,<br>get high quality swag directly from our stores</p>
+                <p class="sub-heading">Wear our craftmanship with pride,<br>get high quality swag directly from our
+                    stores</p>
             </div>
         </div>
-        <a href="#" class="start-shopping">Start Shopping <img src="res\arrow.png" alt="arrow" style="left: 8px; transform: rotate(318deg); width: 30px; height: 30px;"></a>
+        <a href="#" class="start-shopping">Start Shopping <img src="res\arrow.png" alt="arrow"
+                style="left: 8px; transform: rotate(318deg); width: 30px; height: 30px;"></a>
         <img src="res\banner.png" alt="banner" class="banner-image">
-    </div>
-    <div id="shop-category">
-        <p class="main-items">SHOP BY CATEGORY</p>
-        
-    </div>
-    <div class="features-section">
-        <h2 class="features-heading">Why Choose Almaari?</h2>
-        <p class="features-subheading">At Almaari, we blend convenience with a world of fashion opportunities, ensuring excellent service for customers and suppliers.</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                    </svg>
-                    <h3 class="feature-title">Exclusive Fashion Selection</h3>
-                </div>
-                <p class="feature-description">Experience luxury materials and impeccable styles, perfect for your wardrobe.</p>
-            </div>
+    </section>
+    <section id="shop-category">
+        <p class="section-heading">SHOP BY CATEGORY</p>
 
-            <div class="feature-card highlighted">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                    </svg>
-                    <h3 class="feature-title">Secure Shopping</h3>
-                </div>
-                <p class="feature-description">Shop with confidence through our secure payment gateways designed for your safety.</p>
-            </div>
+        <section>
+            <section id="ethnic-wear">
+                <p class="section-heading">ETHNICWEAR</p>
+                <div class="promo-grid">
+                    <!-- Men's Ethnicwear Card -->
+                    <div class="promo-card">
+                        <img src="/api/placeholder/400/500" alt="Men's Ethnicwear" class="promo-image">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Men's Ethnicwear</h3>
+                            <p class="promo-discount">MIN. 60% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Jompers</span>
+                                <span class="brand-logo">See Designs</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="feature-card">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h3 class="feature-title">Fast Shipping</h3>
-                </div>
-                <p class="feature-description">Get your items delivered quickly and conveniently, right to your doorstep.</p>
-            </div>
+                    <!-- Kurta Suit Sets Card -->
+                    <div class="promo-card">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Kurta Suit Sets" class="promo-image">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Kurta Suit Sets</h3>
+                            <p class="promo-discount">50-80% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Avanna</span>
+                                <span class="brand-logo">AHIKA</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="feature-card">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                    </svg>
-                    <h3 class="feature-title">Supplier Tools</h3>
+                    <!-- Kurta & Kurtis Card -->
+                    <div class="promo-card">
+                        <img src="/api/placeholder/400/500" alt="Kurta & Kurtis" class="promo-image">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Kurta & Kurtis</h3>
+                            <p class="promo-discount">MIN. 50% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">W</span>
+                                <span class="brand-logo">KINAYRA</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <img src="/api/placeholder/400/500" alt="Kurta & Kurtis" class="promo-image">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Kurta & Kurtis</h3>
+                            <p class="promo-discount">MIN. 50% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">W</span>
+                                <span class="brand-logo">KINAYRA</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sarees Card -->
+                    <div class="promo-card">
+                        <img src="/api/placeholder/400/500" alt="Sarees" class="promo-image">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Sarees</h3>
+                            <p class="promo-discount">MIN. 40% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Soch</span>
+                                <span class="brand-logo">Satrani</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="feature-description">Register easily and manage your product listings seamlessly without hassle.</p>
-            </div>
+            </section>
+            <section id="Sports-Wear">
+                <p class="section-heading">Sports-Wear</p>
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Men's Ethnicwear</h3>
+                            <p class="promo-discount">MIN. 60% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Jompers</span>
+                                <span class="brand-logo">See Designs</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Men's Ethnicwear</h3>
+                            <p class="promo-discount">MIN. 60% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Jompers</span>
+                                <span class="brand-logo">See Designs</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Men's Ethnicwear</h3>
+                            <p class="promo-discount">MIN. 60% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Jompers</span>
+                                <span class="brand-logo">See Designs</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3 class="promo-title">Men's Ethnicwear</h3>
+                            <p class="promo-discount">MIN. 60% OFF*</p>
+                            <div class="brand-container">
+                                <span class="brand-logo">Jompers</span>
+                                <span class="brand-logo">See Designs</span>
+                                <span class="brand-logo">& MORE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="feature-card">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <h3 class="feature-title">Wide Variety</h3>
-                </div>
-                <p class="feature-description">Explore diverse styles that cater to every taste and occasion at Almaari.</p>
-            </div>
+            </section>
 
-            <div class="feature-card">
-                <div class="feature-header">
-                    <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h3 class="feature-title">Customer Support</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="features-section">
+                <h2 class="features-heading">Why Choose Almaari?</h2>
+                <p class="features-subheading">At Almaari, we blend convenience with a world of fashion opportunities,
+                    ensuring excellent service for customers and suppliers.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                                </path>
+                            </svg>
+                            <h3 class="feature-title">Exclusive Fashion Selection</h3>
+                        </div>
+                        <p class="feature-description">Experience luxury materials and impeccable styles, perfect for
+                            your wardrobe.</p>
+                    </div>
+
+                    <div class="feature-card highlighted">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="white" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                            <h3 class="feature-title">Secure Shopping</h3>
+                        </div>
+                        <p class="feature-description">Shop with confidence through our secure payment gateways designed
+                            for your safety.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <h3 class="feature-title">Fast Shipping</h3>
+                        </div>
+                        <p class="feature-description">Get your items delivered quickly and conveniently, right to your
+                            doorstep.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                            <h3 class="feature-title">Supplier Tools</h3>
+                        </div>
+                        <p class="feature-description">Register easily and manage your product listings seamlessly
+                            without hassle.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <h3 class="feature-title">Wide Variety</h3>
+                        </div>
+                        <p class="feature-description">Explore diverse styles that cater to every taste and occasion at
+                            Almaari.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <svg class="feature-icon" fill="none" stroke="#15803d" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <h3 class="feature-title">Customer Support</h3>
+                        </div>
+                        <p class="feature-description">Enjoy 24/7 support for any inquiries and assistance regarding
+                            your shopping experience.</p>
+                    </div>
                 </div>
-                <p class="feature-description">Enjoy 24/7 support for any inquiries and assistance regarding your shopping experience.</p>
-            </div>
-        </div>
-    </div>
+            </section>
 </body>
+
 </html>
